@@ -25,20 +25,34 @@ export const Homeindex = () => {
             </div>
             <h3 className="pt-36 px-20 text-[40px] text-red-600 font-bold">Restaurantes Cerca</h3>
             <div className="px-20 flex">
-                <LogoLocat /> 
+                <LogoLocat />
                 <p className=" text-gray-400 pl-5 pr-5">Enviar a Ana-calle 1234 Av.Vnzla..</p>
                 <div className="pt-2">
-                <MenuD/>
+                    <MenuD />
                 </div>
-               
+
                 <br />
             </div>
-            <div className="px-20 pt-10">
-            <Carrousel/>
-             {/*    <img src=" ../src/svgComponents/BoulevardRose.jpg" alt="" /> */}
-             {/* <img src="../src/svgComponents/FelicettailMercato.jpg" alt="" /> */}
+            <div className="px-20 pt-10  ">
+                <Carrousel />
             </div>
-             
+            <div>
+                <h3 className="pt-36 px-20 text-[40px] text-red-600 font-bold "> +Populares</h3>
+                <br />
+                <div className="px-20 pt-10">
+                    <Carrousel />
+                </div>
+                <div className="pt-36 px-20 text-[40px] text-red-600 font-bold">
+                    <h4>Cancelar compra</h4>
+                    <br />
+                    <div className="flex justify-center items-center">
+                        <button className="border-red-600 bg-gray-300 p-4 rounded-xl buttoncancel w-96">
+                            Me Arrepentí
+                        </button>
+                    </div>
+                </div>
+
+            </div>
 
             <div>
             </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import { Solar } from "../svgComponents/Solar";
+import { Felicetail } from "../svgComponents/Felicetail";
 
-export const Card2=()=>{
+export const Card3=()=>{
     return(
         <div>
             <div>
-                <Solar/>
+                <Felicetail/>
                </div>
         </div>
     )

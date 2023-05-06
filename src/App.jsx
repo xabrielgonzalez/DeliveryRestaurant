@@ -14,6 +14,7 @@ const HomeInicial =lazy(() =>import('./pages/HomeInicial'));
 const Restaurante = lazy(() => import('./pages/Restaurante'));
 const Pasta = lazy(() => import('./pages/Pasta'));
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/restaurante" element={<Restaurante />} />
           <Route path="/home" element={<Homeindex />} />
           <Route path="/pasta" element={<Pasta />} />
+      
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -7,10 +7,6 @@ import { LogoLocat } from "../svgComponents/LogoLocation";
 import { MenuD } from "../svgComponents/MenuDesplegable";
 import { Carrousel } from "../components/Carrousel";
 
-
-
-
-
 export const Homeindex = () => {
     return (
         <div>
@@ -37,7 +33,7 @@ export const Homeindex = () => {
                 <Carrousel />
             </div>
             <div>
-                <h3 className="pt-36 px-20 text-[40px] text-red-600 font-bold "> +Populares</h3>
+                <h3 className="pt-36 px-20 text-[40px] text-red-600 font-bold"> +Populares</h3>
                 <br />
                 <div className="px-20 pt-10">
                     <Carrousel />

@@ -114,3 +114,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
+.buttoncancel{
+  border: 2px solid red;
+}

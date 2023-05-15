@@ -1,5 +1,5 @@
 import React from "react";
-import { Eggs } from "../svgComponents/eggs";
+import { Eggs } from "../svgComponents/Eggs";
 import { Rice } from "../svgComponents/Rice";
 import { Sandwiche } from "../svgComponents/Sandwiche";
 import { Dessert } from "../svgComponents/Dessert"; 

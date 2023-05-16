@@ -41,7 +41,7 @@ jobs:
         id: deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ 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 }}
           external_repository: xabrielgonzalez/DeliveryRestaurant
           publish_branch: gh-pages
           publish_dir: ./dist

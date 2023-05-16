@@ -9,15 +9,15 @@ jobs:
   build:
    runs-on: ubuntu-lastest
 
-  steps:
-    -name: Checkout
-     uses: action/chechout@v3
+   steps:
+      -name: Checkout
+       uses: action/chechout@v3
 
-    -name: Install & build
-     run: npm i && npm run build
+      -name: Install & build
+       run: npm i && npm run build
 
-    -name: Deploy
-     uses: xabrielgonzalez/github-pages-deply-action@4.1.1
-     with:
-      branch: gh-pages
-      folder: dist
+      -name: Deploy
+       uses: xabrielgonzalez/github-pages-deply-action@4.1.1
+       with:
+         branch: gh-pages
+        folder: dist

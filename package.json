@@ -1,12 +1,11 @@
 {
   "name": "apprestaurant",
   "private": true,
-  "homepage": "https://xabrielgonzalez.github.io/DeliveryRestaurant/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/DeliveryRestaurant/",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -18,7 +18,8 @@ const Pasta = lazy(() => import('./pages/Pasta'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <HomeInicial/>
+   /*  <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomeInicial />} />
@@ -28,7 +29,7 @@ function App() {
           <Route path="/pasta" element={<Pasta />}/>
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </BrowserRouter> */
   )
 }
 export default App;

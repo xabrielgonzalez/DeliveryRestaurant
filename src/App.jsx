@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
 
 
 /* 
@@ -21,13 +20,13 @@ function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
-        <HashRouter>
+        <Routes>
           <Route path="/" element={<HomeInicial />} />
           <Route path="/register" element={<Register />} />
           <Route path="/restaurante" element={<Restaurante />} />
           <Route path="/home" element={<Homeindex />} />
           <Route path="/pasta" element={<Pasta />}/>
-        </HashRouter>
+        </Routes>
       </Suspense>
     </BrowserRouter>
   )

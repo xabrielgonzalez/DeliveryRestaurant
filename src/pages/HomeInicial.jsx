@@ -14,7 +14,6 @@ const HomeInicial = () => {
                 basic && <Login/>     
                 }
                    <button onClick={()=> navigate('/home')} style={{ border: "1px solid red" }} >Home</button>
-                   <button onClick={()=> navigate('/home')} style={{ border: "1px solid red" }} >Home</button>
                    <br />
                    <br />
                    <button onClick={() => navigate('/restaurante')} style={{ border: "1px solid red" }}>restaurante</button>

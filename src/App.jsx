@@ -9,7 +9,7 @@ const Pasta = lazy(() => import('./pages/Pasta'));
 
 function App() {
   return (
-    <Router>
+    <Router basename="/DeliveryRestaurant">
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomeInicial />} />

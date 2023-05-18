@@ -1,6 +1,7 @@
 {
   "name": "apprestaurant",
   "private": true,
+  "homepage": "http://xabrielgonzalez.github.io/DeliveryRestaurant/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

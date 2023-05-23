@@ -11,6 +11,7 @@ import { Next } from "../svgComponents/Next";
 export const Listfood = () => {
     
 const navigate = useNavigate();
+
     return (
         <div>
             <ul className="list-none flex gap-10 ml-72 pt-20 pb-10">

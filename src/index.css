@@ -3,98 +3,101 @@
 @tailwind utilities;
 
 * {
-    /* outline: 1px solid #000; */
-    border: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  /* outline: 1px solid #000; */
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
+
 /* estilos de la seccion MiCuenta */
 .container {
-    display: flex;
-  }
-  
-  .contenido {
-    float: left;
-    flex: 1;
-    padding: 20px;
-  }
+  display: flex;
+}
 
-  .menu {
-    float: left;
-    padding: 20px;
-  }
-  
-  .categorias {
-    width: 250px;
-    background-color: #dd474e;
-    padding: 20px;
-    border: 1px solid #be1d1d;
-    border-radius: 10px;
-    margin-left: 20px;
-    
-  }
-  
-  .categorias h3 {
-    margin-top: 0;
-    color: #fff; 
-    text-align: center;
-  }
-  
-  .categorias ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .categorias li {
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;   
-    color: #fff;
-    font-size: 13px;
-    align-items: center;
-    
-  }
-  /* estilos del Footer */
-  footer {
-    background-color: #FFC0CB;
-    border: 2px solid red;
-    padding: 1rem;
-    text-align: center;
-    
-  }
+.contenido {
+  float: left;
+  flex: 1;
+  padding: 20px;
+}
 
-  .footer ul {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .footer li {
-    margin-right: 0.5%;
-  }
+.menu {
+  float: left;
+  padding: 20px;
+}
+
+.categorias {
+  width: 250px;
+  background-color: #dd474e;
+  padding: 20px;
+  border: 1px solid #be1d1d;
+  border-radius: 10px;
+  margin-left: 20px;
+
+}
+
+.categorias h3 {
+  margin-top: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.categorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categorias li {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 13px;
+  align-items: center;
+
+}
+
+/* estilos del Footer */
+footer {
+  background-color: #FFC0CB;
+  border: 2px solid red;
+  padding: 1rem;
+  text-align: center;
+
+}
+
+.footer ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-right: 0.5%;
+}
+
 /* prueba */
 .card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: dense;
   gap: 1rem;
-  
+
 }
 
 .card {
-  width: 120px; 
+  width: 120px;
   margin-bottom: 20px;
   padding: 0px;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 5px; 
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -113,4 +116,18 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+}
+
+.buttoncancel {
+  border: 2px solid red;
+}
+
+.numberout::-webkit-inner-spin-button,
+.numberout::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberout {
+  -moz-appearance: textfield;
 }

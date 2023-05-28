@@ -6,7 +6,7 @@ export const Productos = () => {
             <h2 className="font-semibold text-lg uppercase mb-2">Productos</h2>
 
             <div>
-            <div className="text-center w-[200px] border-solid border-[1px] border-gray-500 h-72 rounded-md" >
+            <div className="text-center w-[200px] border-solid border-[1px] border-red-500 h-72 rounded-md" >
             <div className="flex justify-center">
 
                 <img

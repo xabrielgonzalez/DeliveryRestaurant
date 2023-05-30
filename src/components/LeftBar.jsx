@@ -3,7 +3,7 @@ import { MdOutlineDeliveryDining, MdPlayArrow } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 export const LeftBar = () => {
     return (
-        <div className="text-center w-[290px] h-[980px] ml-2 border-red-500 rounded border-solid border-[1px]">
+        <div className="text-center w-[300px] h-[980px] ml-2 border-red-500 rounded border-solid border-[1px]">
             <div className="w-screen h-64 md:w-full">
                 <img
                     src="https://ambit.com.mx/wp-content/uploads/2016/12/5-tips-invaluables-para-comenzar-tu-propio-local-de-comida-r%C3%A1pida.jpg"
@@ -39,12 +39,14 @@ export const LeftBar = () => {
                             <BsWhatsapp /> +xx xxxxxx
                         </li>
                     </ul>
-                    <div className="md:border-solid md:border border-red-500 rounded-md mt-2 border-[1px] w-[200px] h-[200px]">
-                        
-                        
+                    <div>
+                        <h3 className="font-semibold mt-4">
+                            Scannea para acceder desde tu movil</h3>
+                        <div className="md:border-solid md:border border-red-500 rounded-md mt-4 border-[1px] h-[200px]">                                               
+                        </div>
                     </div>
-                    <div className="border-solid  border-red-500 rounded-md mt-2 border-[1px]">
-                        <ul className="flex gap-4  block  max-w-screen  ">
+                    <div className="md:border-solid md:border border-red-500 rounded-md mt-5  border-[1px]">
+                        <ul className="flex gap-4  md:block  max-w-screen  ">
                             <li className="flex items-center m-2 ">
                                 {" "}
                                 Calificacion <MdPlayArrow />

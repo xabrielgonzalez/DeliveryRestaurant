@@ -4,7 +4,6 @@ export const Productos = () => {
     return (
         <div className="ml-4 mt-10 md:mt-0 w-screen">
             <h2 className="font-semibold text-lg uppercase mb-2">Productos</h2>
-
             <div>
             <div className="text-center w-[200px] border-solid border-[1px] border-red-500 h-72 rounded-md" >
             <div className="flex justify-center">
@@ -16,7 +15,7 @@ export const Productos = () => {
                 />
             </div>
                 <h4 className="font-semibold m-8">Pasta a la Bolognesa</h4>
-                <a href="/" className="bg-black text-white px-2 py-2 rounded-[4px] mt-2" >Informacion</a>
+                <a href="/" className="bg-red-500 text-white px-2 py-2 rounded-[4px] mt-2" >Informacion</a>
             </div>
             </div>
         </div>

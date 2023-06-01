@@ -15,7 +15,7 @@ export const Carrousel = () => {
     { id: 6, title: <Solar /> },
     { id: 7, title: <BoulevardRose /> },
     { id: 8, title: <Felicetail /> },
-    { id: 9, title: <Solar /> }
+    { id: 9, title: <Solar />}
 
   ];
 

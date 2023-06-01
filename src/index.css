@@ -131,3 +131,10 @@ footer {
 .numberout {
   -moz-appearance: textfield;
 }
+
+
+.rec.rec-arrow-left:hover:enabled,
+.rec.rec-arrow-right:hover:enabled{
+    background-color: red;
+   
+}

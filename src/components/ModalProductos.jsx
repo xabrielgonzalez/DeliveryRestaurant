@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Slider } from '@lifarl/react-scroll-snap-slider';
 import { Productos } from './Productos';
 

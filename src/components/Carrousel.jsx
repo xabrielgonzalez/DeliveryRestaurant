@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from 'react-elastic-carousel';
+import Carousel from '@itseasy21/react-elastic-carousel';
 import { BoulevardRose } from "../svgComponents/BoulevardRose";
 import { Felicetail } from "../svgComponents/Felicetail";
 import { Solar } from "../svgComponents/Solar";

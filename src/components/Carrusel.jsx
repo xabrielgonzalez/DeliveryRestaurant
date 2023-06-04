@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from '@itseasy21/react-elastic-carousel';
-import  ProductosCarrusel  from './Productos';
+import { ProductosCarrusel } from "../components/Productos";
 
 
 export const Carrousel = () => {

@@ -13,14 +13,16 @@ import { handleNameChange,
      handleNumberCvcChange } from '../validation/valiForm'
 
 
+     
 const Register = () => {
-    const { register,handleSubmit } = useForm()
-    
-    
+    const { register,formState:{errors},handleSubmit } = useForm()
+  
       
 
     return (
         <form className='max-w-[650px] my-0 mx-auto' onSubmit={handleSubmit}>
+            
+            
 
             <div className='flex justify-center items-center mt-[20px]'>
                 <LogoPage />
@@ -30,12 +32,16 @@ const Register = () => {
                 <input
                     type='text'
                     className='text-[24px] bg-inherit border-none h-[80%] w-full mx-[15px] focus:outline-none'
-                    oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')"
-                    {...register('name')}
+                    {...register('name',{required:true, maxLength:20})}
                     onChange={handleNameChange}
-                    maxLength={20}
+                   
                     placeholder='Nombre'
                 />
+                {
+                errors.name?.type === "required" &&(
+                    <p>asdadad</p>
+                )
+                }
                
             </div>
 
@@ -176,7 +182,7 @@ const Register = () => {
 
                 <div>
                     <div className='space-x-2'>
-                        <input type="radio" id="huey" name="drone" value="huey" />
+                        <input type="radio" id="cardde" name="drone" value="huey" />
                         <label for="huey">Credito / Debito</label>
                     </div>
 
@@ -205,7 +211,7 @@ const Register = () => {
                         <input
                             type='text'
                             className='numberout text-[24px] pt- bg-inherit border-none h-[80%] w-full mx-[15px] focus:outline-none'
-                            {...register('cardcvc')}
+                            {...register('cardcvc',{required:true})}
                             onChange={handleNumberCvcChange}
                             maxLength={3}
                             placeholder='CVC'
@@ -219,7 +225,7 @@ const Register = () => {
 
                 <div>
                     <div className='space-x-2'>
-                        <input type="radio" id="dewey" name="drone" value="dewey" />
+                        <input type="radio" id="payp" name="drone" value="dewey" />
                         <label for="dewey">Paypal </label>
                     </div>
 
@@ -230,7 +236,7 @@ const Register = () => {
                 <div>
 
                     <div className='space-x-2 mt-8'>
-                        <input type="radio" id="louie" name="drone" value="louie" />
+                        <input type="radio" id="merp" name="drone" value="louie" />
                         <label for="louie">Mercadopago</label>
                     </div>
                     <a href="">

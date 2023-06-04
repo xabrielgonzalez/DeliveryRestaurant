@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ProductosCarrusel = () => {
+const ProductosCarrusel = () => {
     return (
         <div className=" border-red-500 border-solid border-[1px]  rounded-md gap-4">
             <div className="flex justify-center">
@@ -21,4 +21,4 @@ export const ProductosCarrusel = () => {
         </div>
     );
 };
-export default ProductosCarrusel;
+export { ProductosCarrusel };

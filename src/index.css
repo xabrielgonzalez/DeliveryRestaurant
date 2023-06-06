@@ -131,3 +131,31 @@ footer {
 .numberout {
   -moz-appearance: textfield;
 }
+
+.rec.rec-arrow {
+  background-color: transparent;
+  color: red;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.scrollbar-w-2::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.ps__rail-x {
+  background-color: #edf2f7;
+  height: 2px;
+}
+
+.ps__thumb-x {
+  background-color: #f56565;
+  border-radius: 9999px;
+}

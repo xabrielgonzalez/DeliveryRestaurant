@@ -13,24 +13,25 @@ const Restaurante = () => {
       <div className="py-10">
         <div className="grid grid-cols-12 ">
           <div className="col-span-3">
-            <LeftBar />
+            <LeftBar className=" bg-white" />
           </div>
           <div className="mt-10  col-span-9 mr-5">
-            <h2 className="text-2xl font-semibold mb-8">Selección del dia</h2>
+            <h2 className="text-2xl font-semibold  text-red-500 mb-8">Selección del dia</h2>
             <Carrousel />
             <div className="mt-10">
-              <h2 className="text-2xl font-semibold mb-8">Los mas pedidos</h2>
+              <h2 className="text-2xl font-semibold  text-red-500 mb-8">Los mas pedidos</h2>
               <Carrousel />
             </div>
-            <div>
-              <h1 className="text-2xl mt-10 font-semibold mb-8">Nuestras Pastas</h1>
+            <div className="mt-10">
+              <h2 className="text-2xl font-semibold   text-red-500 mb-8">Nuestras Pastas</h2>              
               <Productos2 />
               <Productos2 />
               <Productos2 />
               <Productos2 />
-            </div>
-            <div>
-              <h1 className="text-2xl mt-10 font-semibold mb-8">Nuestros Postres </h1>
+              <div className=" border-gray-300 my-4 w-full border-t border-[0.5px] border-solid"></div>
+            </div>            
+            <div className="mt-10">              
+              <h2 className="text-2xl  font-semibold  text-red-500 mb-8">Nuestros Postres </h2>              
               <Productos2 />
               <Productos2 />
               <Productos2 />

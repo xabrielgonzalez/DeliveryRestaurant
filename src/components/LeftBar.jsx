@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineDeliveryDining, MdPlayArrow } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
+import Clasification from "./Classification";
 
 const LeftBar = () => {
   return (
@@ -12,7 +13,7 @@ const LeftBar = () => {
           className="object-cover w-full h-full"
         ></img>
       </div>
-      <div className="relative top-[-30px] overflow-hidden w-16 h-16 md:w-20 md:h-20 rounded-full">
+      <div className="relative top-[-30px] overflow-hidden w-16 h-16 md:w-20 md:h-20 rounded-xl">
         <img
           src="https://www.creativefabrica.com/wp-content/uploads/2021/05/15/restaurant-logo-Graphics-12037753-1.jpg"
           alt=""
@@ -20,7 +21,7 @@ const LeftBar = () => {
         ></img>
       </div>
       <h1 className="text-2xl font-bold">Restaurante Pasta</h1>
-      <div lassName="flex text-center">
+      <div>
         <ul className="flex gap-4 md:block  max-w-screen justify-center">
           <li className="flex items-center m-5 text-sm md:text-lg">
             {" "}
@@ -43,24 +44,7 @@ const LeftBar = () => {
           </div>
         </div>
         <div className="md:border-solid md:border border-red-500 rounded-md  border-[1px] ml-12 mt-5 h-[200px] w-[200px]">
-          <ul className="flex gap-4  md:block">
-            <li className="flex items-center m-2 ">
-              {" "}
-              Calificacion <MdPlayArrow className="text-red-500"/>
-            </li>
-            <li className="flex items-center m-2">
-              {" "}
-              Calificacion <MdPlayArrow className="text-red-500"/>
-            </li>
-            <li className="flex items-center m-2">
-              {" "}
-              Calificacion <MdPlayArrow className="text-red-500" />
-            </li>
-            <li className="flex items-center m-2">
-              {" "}
-              Calificacion <MdPlayArrow className="text-red-500" />
-            </li>
-          </ul>
+          <Clasification />
         </div>
       </div>
     </div>

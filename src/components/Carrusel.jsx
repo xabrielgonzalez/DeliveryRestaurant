@@ -19,14 +19,13 @@ export const Carrousel = () => {
 
   const carouselSettings = {    
     itemsToShow: 3,
-    pagination: false,
-    arrowColor: 'red',
-    isInfinite: true,
-    itemPadding: [0, 25] 
+    pagination: false,    
+    itemPadding: [0, 25], 
+    
   };
 
   return (
-    <Carousel className="gap-4" {...carouselSettings}>
+    <Carousel {...carouselSettings}>
       {items.map(item => <div key={item.id}>{item.title}</div>
       )}
     </Carousel>

@@ -1,9 +1,11 @@
 import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
+import YellowStarIcon from "../svgComponents/YellowStart";
 import { MdPlayArrow } from "react-icons/md";
 
+
 export const Productos2 = () => {
-  return (      
+  return (
     <div className="mt-5 ml-4 w-screen md:max-w-auto md:100vw overflow-hidden">
       <div className=" border-gray-300 my-4 w-full border-t border-[0.5px] border-solid"></div>
       <h2 className="font-semibold text-lg uppercase mb-2 ">Pasta</h2>
@@ -22,9 +24,9 @@ export const Productos2 = () => {
             <div className="flex items-center justify-between mt-6 lg:mt-0">
               <h4 className="font-semibold text-lg lg:pl-10">Rabioles</h4>
               <div className="g-2 flex">
-                <AiOutlineStar />
-                <AiOutlineStar />
-                <AiOutlineStar />
+                <YellowStarIcon />
+                <YellowStarIcon />
+                <YellowStarIcon />
                 <AiOutlineStar />
                 <AiOutlineStar />
               </div>
@@ -40,15 +42,16 @@ export const Productos2 = () => {
               con un elemento cortante (muchas veces una ruedecilla dentada
               giratoria).
             </p>
+            <div className="md:flex md:justify-end md:mt-4 lg:pl-10">
+              <span className="text-2xl">$1234</span>
+            </div>
           </div>
-          <div className="md:flex md:justify-start md:mt-4 lg:pl-10">
-            <span className="">$1234</span>
-            <MdPlayArrow  className="text-red-500" />
-          </div>
+          <MdPlayArrow className="text-red-500 m-10 text-4xl " />
+
         </div>
       </div>
     </div>
-     
+
   );
 };
 export default Productos2

@@ -6,6 +6,7 @@ const Homeindex = lazy(() => import('./pages/Homeindex'));
 const HomeInicial = lazy(() => import('./pages/HomeInicial'));
 const Restaurante = lazy(() => import('./pages/Restaurante'));
 const Pasta = lazy(() => import('./pages/Pasta'));
+const Restaurants = lazy(() => import("./pages/Restaurants"));
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/restaurante" element={<Restaurante />} />
           <Route path="/home" element={<Homeindex />} />
           <Route path="/pasta" element={<Pasta />} />
+          <Route path="/restaurants" element={<Restaurants />} />
         </Routes>
       </Suspense>
     </Router>

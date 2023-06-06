@@ -6,8 +6,8 @@ export const Card1=()=>{
     return(
         <div>
             <div>
-            <BoulevardRose/>
-               </div>
+                <BoulevardRose/>
+            </div>
         </div>
     )
 }

@@ -27,9 +27,11 @@ export const Carrousel = () => {
   };
 
   return (
+    <div className="styling-example">
     <Carousel {...carouselSettings}>
       {items.map(item => <div key={item.id}>{item.title}</div>
       )}
     </Carousel>
+    </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import { MdOutlineDeliveryDining, MdPlayArrow } from "react-icons/md";
+import { MdOutlineDeliveryDining, MdWatchLater, MdOutlineGrade, MdOutlineCall } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import Clasification from "./Classification";
 
 const LeftBar = () => {
   return (
-    <div className="text-center w-[300px] h-[1000px] ml-2 border-red-500 rounded border-solid border-[1px] right-0">
+    <div className=" text-center w-[300px]  ml-2 inline-block border-gray-300 overflow-hidden bg-white rounded border-solid border-[1px] right-0">
       <div className="w-screen h-64 md:w-full">
         <img
           src="https://ambit.com.mx/wp-content/uploads/2016/12/5-tips-invaluables-para-comenzar-tu-propio-local-de-comida-r%C3%A1pida.jpg"
@@ -13,39 +13,75 @@ const LeftBar = () => {
           className="object-cover w-full h-full"
         ></img>
       </div>
-      <div className="relative top-[-30px] overflow-hidden w-16 h-16 md:w-20 md:h-20 rounded-xl">
+      <div className="flex items-center">
         <img
           src="https://www.creativefabrica.com/wp-content/uploads/2021/05/15/restaurant-logo-Graphics-12037753-1.jpg"
           alt=""
-          className="rounded-full object-cover"
+          className="rounded-full md:w-20 md:h-20 object-cover"
         ></img>
+        <h2 className="text-2xl font-bold ">Restaurante Pasta</h2>
       </div>
-      <h1 className="text-2xl font-bold">Restaurante Pasta</h1>
+      <div className="m-5 flex items-center">
+        <p className=" text-center">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+      </div>
       <div>
         <ul className="flex gap-4 md:block  max-w-screen justify-center">
           <li className="flex items-center m-5 text-sm md:text-lg">
             {" "}
-            <MdPlayArrow className="text-red-500"/><MdOutlineDeliveryDining className="text-red-500 text-2xl" />
-            <p>Delivery</p>
+            <MdOutlineDeliveryDining className="text-rose-700" />
+            <div className="flex justify-between w-full">
+              <p>Tiempo de entrega</p>
+              <p className="text-right font-semibold">40-60 min</p>
+            </div>
           </li>
           <li className="flex items-center m-5 text-sm md:text-lg">
             {" "}
-            <div className="flex items-center justify-center space-x-2">
-            <MdPlayArrow className="text-red-500"/><BsWhatsapp className="text-green-500 text-2xl" />
+            <MdWatchLater className="text-rose-700" />
+            <div className="flex justify-between w-full">
+              <p>Envio</p>
+              <p className="text-right font-semibold">Gratis</p>
+            </div>
+          </li>
+          <li className="flex items-center m-5 text-sm md:text-lg">
+            {" "}
+            <MdOutlineGrade className="text-rose-700" />
+            <div className="flex justify-between w-full">
+              <p>Calificación</p>
+              <p className="text-right font-semibold">4.5 Estrellas</p>
+            </div>
+          </li>
+          <li className="flex items-center m-5 text-sm md:text-lg">
+            {" "}
+            <BsWhatsapp className="text-green-500" />
+            <div className="flex justify-between w-full">
+              <p>Contacto</p>
+              <p className="text-right font-semibold">54-568-4547</p>
+            </div>
+          </li>
+          <li className="flex items-center m-5 text-sm md:text-lg">
+            {" "}
+            <MdOutlineCall className="text-green-500" />
+            <div className="flex justify-between w-full">
               <p>Whatsapp</p>
+              <p className="text-right font-semibold">54-568-4547</p>
             </div>
           </li>
         </ul>
+        <div className="md:border-solid md:border border-gray-300 rounded-md my-5 items-center inline-block border-[1px] w-[200px]">
+          <Clasification />
+        </div>
         <div>
           <h3 className="font-semibold mt-4">
             Scannea para acceder desde tu movil</h3>
-          <div className="md:border-solid md:border border-red-500 rounded-md  border-[1px] ml-12 mt-5 h-[200px] w-[200px]">
+          <div className="md:border-solid md:border border-gray-300 rounded-xl my-5 border-[1px] ml-12 mt-5 h-[200px] w-[200px]">
             <p className="font-semibold mt-4">Aca va un qr</p>
           </div>
         </div>
-        <div className="md:border-solid md:border border-red-500 rounded-md  border-[1px] ml-12 mt-5 h-[200px] w-[200px]">
-          <Clasification />
-        </div>
+
       </div>
     </div>
   );

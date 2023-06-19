@@ -1,37 +1,28 @@
 import React from "react";
-import { AiOutlineStar } from "react-icons/ai";
-import YellowStarIcon from "../svgComponents/YellowStart";
-import { MdPlayArrow } from "react-icons/md";
-
+import { BiChevronRight } from "react-icons/bi";
+import { BiBookmark } from "react-icons/bi";
+import { MdOutlineEco } from "react-icons/md";
 
 export const Productos2 = () => {
   return (
-    <div className="mt-5 ml-4 w-screen md:max-w-auto md:100vw overflow-hidden">
-      <div className=" border-gray-300 my-4 w-full border-t border-[0.5px] border-solid"></div>
-      <h2 className="font-semibold text-lg uppercase mb-2 ">Pasta</h2>
-      <div className="flex">
-        <div className="max-h-full object-cover md:items-center w-34 md:grid lg:flex">
+    <div className="border-b border-gray-100 border-solid">
+      <div className="flex container-auto">
+        <div className="container md:items-center">
           <div className="md:h-full">
             <div className="w-full md:w-full md:flex md:justify-start lg:h-full">
               <img
                 src="https://babycocina.com/wp-content/uploads/2021/06/Recetas-de-pastas-italianas.jpg"
                 alt=""
-                className="h-32 w-full md:w-full md:h-full object-cover md:max-w-[200px] rounded-xl lg:max-w-auto"
+                className="h-5/6 m-3 w-10/12 object-cover md:max-w-[200px] rounded-xl lg:max-w-auto"
               />
             </div>
           </div>
-          <div className="items-center justify-between gap-28">
-            <div className="flex items-center justify-between mt-6 lg:mt-0">
-              <h4 className="font-semibold text-lg lg:pl-10">Rabioles</h4>
-              <div className="g-2 flex">
-                <YellowStarIcon />
-                <YellowStarIcon />
-                <YellowStarIcon />
-                <AiOutlineStar />
-                <AiOutlineStar />
-              </div>
+          <div>
+            <div>
+              <h4 className="flex font-semibold text-lg">Ravioles
+              </h4>
             </div>
-            <p className="max-h-[150px] w-[330px] text-justify md:max-h-72 overflow-auto md:max-w-[500px] md:w-[500px] md:h-32 lg:max-w-none lg:w-[700px] lg:pl-10 xl:w-[650px] xl:h-[180px]">
+            <p className="text-sm w-[580px] h-[140px]  overflow-hidden justify-center">
               La preparación de los ravioli requiere de una pasta especial, no
               de una simple pasta al huevo, sino de una con bastante agua y
               relativamente poco huevo. Pese a su nombre ('plegados'),
@@ -42,16 +33,20 @@ export const Productos2 = () => {
               con un elemento cortante (muchas veces una ruedecilla dentada
               giratoria).
             </p>
-            <div className="md:flex md:justify-end md:mt-4 lg:pl-10">
-              <span className="text-2xl">$1234</span>
-            </div>
           </div>
-          <MdPlayArrow className="text-red-500 m-10 text-4xl " />
-
+          <div className="justify-between mt-3 mb-3">
+            <div className="flex items-end">
+              <MdOutlineEco className="w-7 h-7 flex items-center justify-center rounded-full m-1 bg-amber-600 text-white" />
+              <BiBookmark className="w-7 h-7 flex items-center justify-center rounded-full m-1 bg-amber-600 text-white" />
+            </div>
+            <p className="text-2xl text-amber-600 pt-32">$1350</p>
+          </div>
+          <BiChevronRight className="text-white m-10 text-3xl bg-rose-700 rounded-full" />
         </div>
       </div>
     </div>
 
+
   );
 };
-export default Productos2
+export default Productos2;

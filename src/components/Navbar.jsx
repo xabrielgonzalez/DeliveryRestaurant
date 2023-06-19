@@ -9,7 +9,7 @@ import { MenuD } from "../svgComponents/MenuDesplegable";
 
 export const Navbar = () => {
     return (
-        <div className=" pt-3 flex justify-between  items-center pl-8 ">
+        <div className=" pt-3 flex justify-between bg-rose-700 items-center pl-8 ">
             <div className="flex gap-1 items-center pl-9">
                 <LogoNav/>
                 <LogoLocat/>

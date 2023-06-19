@@ -16,26 +16,30 @@ const Restaurante = () => {
             <LeftBar className=" bg-white" />
           </div>
           <div className="mt-10  col-span-9 mr-5">
-            <h2 className="text-2xl font-semibold  text-red-500 mb-8">Selección del dia</h2>
+            <h2 className="text-2xl font-semibold  text-rose-700 mb-8">Selección del dia</h2>
             <Carrousel />
             <div className="mt-10">
-              <h2 className="text-2xl font-semibold  text-red-500 mb-8">Los mas pedidos</h2>
+              <h2 className="text-2xl font-semibold  text-rose-700 mb-8">Los mas pedidos</h2>
               <Carrousel />
             </div>
-            <div className="mt-10">
-              <h2 className="text-2xl font-semibold   text-red-500 mb-8">Nuestras Pastas</h2>              
-              <Productos2 />
-              <Productos2 />
-              <Productos2 />
-              <Productos2 />
+            <div className="mt-10 rounded-xl">
+              <h2 className="text-2xl font-semibold  rounded bg-white text-rose-700 mb-8">Nuestras Pastas</h2>
+              <div className=" bg-white">
+                <Productos2 />
+                <Productos2 />
+                <Productos2 />
+                <Productos2 />
+              </div>
               <div className=" border-gray-300 my-4 w-full border-t border-[0.5px] border-solid"></div>
-            </div>            
-            <div className="mt-10">              
-              <h2 className="text-2xl  font-semibold  text-red-500 mb-8">Nuestros Postres </h2>              
+            </div>
+            <div className="mt-10 ">
+              <h2 className="text-2xl container bg-white text-rose-700 mb-8">Nuestros Postres </h2>
+              <div className="bg-white">
               <Productos2 />
               <Productos2 />
               <Productos2 />
               <Productos2 />
+              </div>
             </div>
           </div>
         </div>

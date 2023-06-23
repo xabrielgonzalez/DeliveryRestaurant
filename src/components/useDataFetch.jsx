@@ -1,14 +1,49 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useInfiniteQuery, useMutation, useQueries } from '@tanstack/react-query';
 
-export const useDataFetch = ({url, options, queryKey, config}) => {
+export const useDataFetch = ({url, options, queryKey, config, queryType, queries}) => {
 
-    const result = useQuery(queryKey, async () => {
+    let result = "";
 
-        const response = await fetch(url, options);
-        const data = response.json();
-        return data;
+    if(queryType === "query"){
 
-    }, config);
+        result = useQuery(queryKey, async () => {
+
+            const response = await fetch(url, options);
+            const data = response.json();
+            return data;
+    
+        }, config);
+
+    }else if(queryType === "infiniteQuery"){
+
+        result = useInfiniteQuery(queryKey, async () => {
+
+            const response = await fetch(url, options);
+            const data = response.json();
+            return data;
+    
+        }, config);
+
+    }else if(queryType === "mutation"){
+
+        result = useMutation(async () => {
+
+            const response = await fetch(url, options);
+            const data = response.json();
+            return data;
+    
+        }, config);
+
+    }else if(queryType === "queries"){
+
+        result = useQueries({
+            
+            queries: queries
+
+        });
+
+    };
+    
 
     return result;
 };

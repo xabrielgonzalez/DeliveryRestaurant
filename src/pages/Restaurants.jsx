@@ -15,6 +15,11 @@ export const Restaurants = () => {
     // cada peticion, con lo cual debemos darle un array que contiene 
     // el string que va a identificar de forma unica la peticion en la cache.
 
+    // La queryType es el tipo de query que queremos hacer, por ejemplo,
+    // para hacer GET de datos usamos el queryType: "query" o el queryType: "queries" 
+    // si necesitamos hacer varias peticiones de forma condicional, mientras que 
+    //para POST, PUT y DELETE usamos el queryType: "mutation".
+
     // Opcionalmente podemos agregar el numero de pagina como elemento del array, 
     // esto para realizar paginaciones, ademas params puede tener la
     // propiedad options, que es un objeto donde podemos por ejemplo perzonalizar
@@ -25,6 +30,7 @@ export const Restaurants = () => {
         // ESTOS DATOS SON OBLIGATORIOS!
         url: '/data/restaurants.json',
         queryKey: ["restaurants"],
+        queryType: "query",
         // ESTOS DATOS SON OPCIONALES!
         // Si no se especifica una configuracion, 
         // react-query funcionara con los valores default.
@@ -35,7 +41,9 @@ export const Restaurants = () => {
             refetchOnWindowFocus: false, // Evita que las solicitudes se realicen automáticamente al enfocar la ventana.
             refetchOnMount: false, // Evita que la primera solicitud se realice automáticamente al montar el componente.
             enabled: true, // Indica si la solicitud está habilitada (puedes cambiarlo según tus necesidades).
+            suspense: true,
         },
+        // ESTOS DATOS PUEDEN LLEGAR A SER NECESARIOS!
         // En este caso options no es necesario, solo se encuentra
         // a modo de ejemplo.
         options: {
@@ -47,7 +55,7 @@ export const Restaurants = () => {
     };
     
     // Usamos el hook con la "api".
-    const { data, isLoading, isError, error } = useDataFetch(params);
+    const { data, isLoading, isError, error, isSuccess } = useDataFetch(params);
 
     // Si el estado de carga es verdadero, muestra un mensaje de carga.
     if(isLoading){
@@ -61,7 +69,7 @@ export const Restaurants = () => {
 
     // Si los datos son obtenidos con exito se los asigna a una variable para su 
     // manipulacion.
-    if(data){
+    if(isSuccess){
         restaurants = data;
         console.log(data); // VER CONSOLA!
     }

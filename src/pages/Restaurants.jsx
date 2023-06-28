@@ -1,17 +1,18 @@
 import React from "react";
-import { useDataFetch } from "../components/useDataFetch";
+import { useReactQuery } from "../components/useReactQuery";
+import { getRestaurants } from "../api/restaurantAPI";
 
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { Card } from "../components/Card";
+import { AddRestaurant } from "../components/addRestaurant";
 
 export const Restaurants = () => {
 
     let restaurants = [];
 
     // Params es un objeto que recibe nuestro custom hook y
-    // contiene la URL a la que vamos a realizar la peticion, 
-    // la queryKey que es parte de como react-query "catchea"
+    // contiene la queryKey que es parte de como react-query "catchea"
     // cada peticion, con lo cual debemos darle un array que contiene 
     // el string que va a identificar de forma unica la peticion en la cache.
 
@@ -21,16 +22,15 @@ export const Restaurants = () => {
     //para POST, PUT y DELETE usamos el queryType: "mutation".
 
     // Opcionalmente podemos agregar el numero de pagina como elemento del array, 
-    // esto para realizar paginaciones, ademas params puede tener la
-    // propiedad options, que es un objeto donde podemos por ejemplo perzonalizar
-    // los headers de nuestro fetch para autenticaciones de usuario, o cambiar nuestro method, etc.
+    // esto para realizar paginaciones.
 
     // La propiedad config recibe un objeto con configuraciones adicionales de react-query.
+
     const params = {
         // ESTOS DATOS SON OBLIGATORIOS!
-        url: '/data/restaurants.json',
-        queryKey: ["restaurants"],
         queryType: "query",
+        queryKey: ["restaurants"],
+        queryFn: getRestaurants,
         // ESTOS DATOS SON OPCIONALES!
         // Si no se especifica una configuracion, 
         // react-query funcionara con los valores default.
@@ -42,37 +42,29 @@ export const Restaurants = () => {
             refetchOnMount: false, // Evita que la primera solicitud se realice automáticamente al montar el componente.
             enabled: true, // Indica si la solicitud está habilitada (puedes cambiarlo según tus necesidades).
             suspense: true,
-        },
-        // ESTOS DATOS PUEDEN LLEGAR A SER NECESARIOS!
-        // En este caso options no es necesario, solo se encuentra
-        // a modo de ejemplo.
-        options: {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }
+            select: restaurants => restaurants.sort((a, b) => a.id - b.id)
+        }  
     };
-    
+
     // Usamos el hook con la "api".
-    const { data, isLoading, isError, error, isSuccess } = useDataFetch(params);
+    const { data, isLoading, isError, error, isSuccess} = useReactQuery(params);
 
     // Si el estado de carga es verdadero, muestra un mensaje de carga.
     if(isLoading){
         return <div>Loading...</div>
-    }
+    };
 
     // Si hay un error, muestra un mensaje de error con el mensaje especifico.
     if(isError){
         return <div>Error: {error.message}</div>
-    }
+    };
 
     // Si los datos son obtenidos con exito se los asigna a una variable para su 
     // manipulacion.
     if(isSuccess){
         restaurants = data;
         console.log(data); // VER CONSOLA!
-    }
+    };
 
     return (
         <div>
@@ -89,10 +81,12 @@ export const Restaurants = () => {
                         restaurants.map((restaurant) => (
                             <Card
                                 key={restaurant.id}
+                                id={restaurant.id}
                                 name={restaurant.name}
                                 description={restaurant.description}
                                 logo={restaurant.logo}
                                 cover={restaurant.cover}
+                                address={restaurant.address}
                             />
                         ))
                       
@@ -100,6 +94,7 @@ export const Restaurants = () => {
                      
                 </div>
             </main>
+            <AddRestaurant/>
             <Footer/>
         </div>
     );

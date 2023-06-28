@@ -1,7 +1,29 @@
 import React from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { useReactQuery } from "../components/useReactQuery";
+
+import { deleteRestaurant } from "../api/restaurantAPI";
 import { Star } from "../svgComponents/Star";
 
+
 export const Card=(promps)=>{
+
+    const queryClient = useQueryClient();
+
+    const params = {
+        // ESTOS DATOS SON OBLIGATORIOS!
+        queryType: "mutation",
+        queryFn: deleteRestaurant,
+        config: {
+            onSuccess: () => {
+                console.log("Restaurante Eliminado!");
+                queryClient.invalidateQueries("restaurants");
+            }
+        }
+    };
+
+    const deleteRestaurantMutation = useReactQuery(params);
+
     return(
         <>
             
@@ -19,10 +41,11 @@ export const Card=(promps)=>{
                     </div>
                     <div className="ml-10 pt-2"><Star/></div>
                 </div>
-                <div className="text-left my-2">Address</div>
+                <div className="text-left my-2">{promps.address}</div>
                 <div className="py-2">       
                     <p className="text-gray-700 text-base text-justify">{promps.description}</p>
                 </div>
+                <button className="p-2 bg-red-400 rounded-md" onClick={() => deleteRestaurantMutation.mutate(promps.id)}>Eliminar</button>
             </div>
 
         </>

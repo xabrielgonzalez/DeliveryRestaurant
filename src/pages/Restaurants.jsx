@@ -11,22 +11,21 @@ export const Restaurants = () => {
 
     let restaurants = [];
 
-    // Params es un objeto que recibe nuestro custom hook y
-    // contiene la queryKey que es parte de como react-query "catchea"
-    // cada peticion, con lo cual debemos darle un array que contiene 
-    // el string que va a identificar de forma unica la peticion en la cache.
-
-    // La queryType es el tipo de query que queremos hacer, por ejemplo,
-    // para hacer GET de datos usamos el queryType: "query" o el queryType: "queries" 
-    // si necesitamos hacer varias peticiones de forma condicional, mientras que 
-    //para POST, PUT y DELETE usamos el queryType: "mutation".
-
-    // Opcionalmente podemos agregar el numero de pagina como elemento del array, 
-    // esto para realizar paginaciones.
-
-    // La propiedad config recibe un objeto con configuraciones adicionales de react-query.
-
     const params = {
+        // Params es un objeto que recibe nuestro custom hook y
+        // contiene la queryKey que es parte de como react-query "catchea"
+        // cada peticion, con lo cual debemos darle un array que contiene 
+        // el string que va a identificar de forma unica la peticion en la cache,
+        // opcionalmente podemos agregar el numero de pagina como elemento del array, 
+        // esto para realizar paginaciones.
+
+        // La queryType es el tipo de query que queremos hacer, por ejemplo,
+        // para hacer GET de datos usamos el queryType: "query" o el queryType: "queries" 
+        // si necesitamos hacer varias peticiones de forma condicional, mientras que 
+        // para POST, PUT y DELETE usamos el queryType: "mutation".
+
+        // La propiedad config recibe un objeto con configuraciones adicionales de react-query.
+
         // ESTOS DATOS SON OBLIGATORIOS!
         queryType: "query",
         queryKey: ["restaurants"],
@@ -63,7 +62,7 @@ export const Restaurants = () => {
     // manipulacion.
     if(isSuccess){
         restaurants = data;
-        console.log(data); // VER CONSOLA!
+        console.log(restaurants); // VER CONSOLA!
     };
 
     return (
